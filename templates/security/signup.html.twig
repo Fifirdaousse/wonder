@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+{% block title %}Inscription
+{% endblock %}
+
+{% block body %}
+	<div class="block">
+		<h2 class="pb-30">Inscription</h2>
+		{{ form_start (form) }}
+		{{ form_errors (form) }}
+		<div class="form-row">
+			{{ form_label (form.email) }}
+			{{ form_widget (form.email) }}
+		</div>
+
+		<div class="form-row">
+			{{ form_label (form.firstname) }}
+			{{ form_widget (form.firstname) }}
+		</div>
+
+		<div class="form-row">
+			{{ form_label (form.lastname) }}
+			{{ form_widget (form.lastname) }}
+		</div>
+
+		<div class="form-row">
+			{{ form_label (form.picture) }}
+			{{ form_widget (form.picture) }}
+		</div>
+
+		<div class="form-row">
+			{{ form_label (form.password) }}
+			{{ form_widget (form.password) }}
+		</div>
+
+		<button class="btn btn-primary mr-10">Inscription</button>
+
+		<small>
+			<a href="{{ path('login') }}">Vous avez déjà un compte ?</a>
+		</small>
+		{{ form_end (form) }}
+	</div>
+{% endblock %}
